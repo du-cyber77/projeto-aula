@@ -21,36 +21,38 @@ class TurmaController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'nome' => 'required|string|max:255',
-        'ano' => 'required|string|max:255',
-        'descricao' => 'nullable|string',
-    ]);
-
-    // Se 'professor' não está no banco, remova do request
-    $dados = $request->only(['nome', 'descricao', 'ano']);
-
-    Turma::create($dados);
-
-    return redirect()->route('turmas.index')->with('success', 'Turma cadastrada com sucesso!');
-}
-
-public function destroy(Turma $turma)
     {
-        $turma->delete();
+        $request->validate([
+            'nome' => 'required|string|max:255',
+            'ano' => 'required|string|max:255',
+            'descricao' => 'nullable|string',
+        ]);
+
+        // Se 'professor' não está no banco, remova do request
+        $dados = $request->only(['nome', 'descricao', 'ano']);
+
+        Turma::create($dados);
+
+        return redirect()->route('turmas.index')->with('success', 'Turma cadastrada com sucesso!');
+    }
+
+    public function destroy(Turma $turma)
+    {
+        // Usamos forceDelete() para remover a turma permanentemente do banco de dados.
+        // O método delete() normal só faz um "soft delete", marcando o registro como excluído.
+        $turma->forceDelete();
 
         return redirect()->route('turmas.index')
             ->with('success', 'Turma excluída com sucesso!');
     }
 
- public function edit(Turma $turma)
+    public function edit(Turma $turma)
     {
         return view('turmas.edit', compact('turma'));
     }
     
 
- public function update(Request $request, Turma $turma)
+    public function update(Request $request, Turma $turma)
     {
         $request->validate([
             'nome' => 'required|string|max:100',
