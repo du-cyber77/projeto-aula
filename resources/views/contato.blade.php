@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="/">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Alunos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('alunos.index') }}">Alunos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('turmas.index') }}">Turmas</a>/li>
                     <li class="nav-item"><a class="nav-link" href="contato">Contato</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre">Sobre</a></li>

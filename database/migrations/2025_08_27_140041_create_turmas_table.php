@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nome', 100)->unique();
             $table->text('descricao')->nullable();
             $table->integer('ano')->nullable();
-            $table->timestamp('createdat')->useCurrent();
-            $table->timestamp('updatedat')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamps();   // 👈 cria created_at e updated_at certinhos
+            $table->softDeletes(); // 👈 cria deleted_at
         });
     }
 

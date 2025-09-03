@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TurmaController;
+use App\Http\Controllers\AlunoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,3 +17,4 @@ Route::get('/contato', function () {
 });
 
 Route::resource('turmas', TurmaController::class);
+Route::resource('alunos', AlunoController::class);

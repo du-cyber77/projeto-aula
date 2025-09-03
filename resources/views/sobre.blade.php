@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="/">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre">Alunos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('alunos.index') }}">Alunos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('turmas.index') }}">Turmas</a></li>
                     <li class="nav-item"><a class="nav-link" href="contato">Contato</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre">Sobre</a></li>
                 </ul>
             </div>
         </div>
@@ -32,21 +32,21 @@
 
     {{-- Conteúdo --}}
     <div class="container">
-        <h1>Sobre o Sistema de Cadastro de Alunos</h1>
-        <p>Bem-vindo ao nosso sistema de cadastro de alunos! Este site foi criado para facilitar o cadastro e a gestão de alunos de forma simples e eficiente.</p>
+        <h1>Sobre o Sistema de Gestão Escolar</h1>
+        <p>Este sistema foi desenvolvido para tornar a administração escolar mais prática, centralizando informações e agilizando processos do dia a dia.</p>
 
-        <h2>Objetivo</h2>
-        <p>Nosso objetivo é fornecer uma plataforma onde escolas e instituições educacionais possam gerenciar o cadastro de alunos, mantendo os dados organizados e acessíveis.</p>
+        <h2>Missão</h2>
+        <p>Nosso propósito é oferecer uma solução tecnológica que auxilie escolas e instituições a organizarem seus dados acadêmicos de forma rápida, eficiente e confiável.</p>
 
-        <h2>Funcionalidades</h2>
+        <h2>Recursos</h2>
         <ul>
-            <li>Cadastro de alunos com informações como nome, idade, email e telefone.</li>
-            <li>Interface simples e amigável.</li>
-            <li>Armazenamento seguro das informações dos alunos.</li>
+            <li>Cadastro completo de alunos, turmas e professores.</li>
+            <li>Painel administrativo intuitivo e responsivo.</li>
+            <li>Segurança e integridade das informações armazenadas.</li>
         </ul>
 
-        <h2>Contato</h2>
-        <p>Se tiver alguma dúvida ou sugestão, entre em contato conosco através do email: <a href="mailto:contato@escola.com">contato@escola.com</a></p>
+        <h2>Fale Conosco</h2>
+        <p>Para suporte ou sugestões, envie um email para: <a href="mailto:suporte@gestaoescolar.com">suporte@gestaoescolar.com</a></p>
     </div>
 
     <!-- Bootstrap JS Bundle-->
